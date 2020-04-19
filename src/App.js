@@ -20,11 +20,9 @@ function App() {
         const response = await fetch(url);
         const json = await response.json();
         setGifs(json.data);
-        console.log(json.data)
         setLoading(false);
       } catch
       (error) {
-        console.log(error.json());
         setLoading(false)
       }
     };
