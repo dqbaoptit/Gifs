@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+
+
+import GIF from './containers/GIF/App';
+import Sticker from './containers/Sticker';
+import './index.css';
 import 'antd/dist/antd.css';
 
 ReactDOM.render(
-  <App />,
+  <Router >
+    <Switch>
+      <Route exact path='/Gifs' component={GIF} />
+      <Route path='/sticker/' component={Sticker} />
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 
