@@ -1,11 +1,9 @@
 import React,{ useState,useEffect } from 'react';
-import './App.css';
-import Seacher from './components/Searcher';
-import Footer from './components/Footer';
-import { Spin,Button,Modal,Empty } from 'antd';
-import { SyncOutlined } from '@ant-design/icons';
-
-const antIcon = <SyncOutlined style={{ fontSize: 120,color: "red" }} spin />;
+import Searcher from '../../components/Searcher';
+import Footer from '../../components/Footer';
+import { Button,Modal,Empty } from 'antd';
+import Loading from '../../components/Loading';
+import Navbar from '../../components/Navbar';
 
 function App() {
 	const baseUrl = 'https://api.giphy.com/v1/gifs/trending?api_key=B3d73H94YDaNTZ3YVG2byUpCWmJvNnmN&limit=12&rating=G';
@@ -19,6 +17,7 @@ function App() {
 		offset: 0
 	})
 	const [hashtag,setHashtag] = useState('trending')
+
 	useEffect(() => {
 		async function Fetch() {
 			setLoading(true);
@@ -54,8 +53,9 @@ function App() {
 	},[search])
 	return (
 		<div>
+			<Navbar />
 			<div align="center">
-				<Seacher
+				<Searcher
 					value={search}
 					handleChange={(e) => { setSearch(e.target.value) }}
 					holder="Search GIF..."
@@ -64,11 +64,11 @@ function App() {
 			<div>
 				<h3 style={{ color: "red" }}> #hashtag : {hashtag}</h3>
 			</div>
-			{loading ? <div align="center"><Spin indicator={antIcon} /></div> :
+			{loading ? <Loading /> :
 				<div className='body' align="center">
 					{gifs.length === 0 && <Empty />}
 
-					{(url !== baseUrl && gifs.length !== 0) &&
+					{(url !== baseUrl) &&
 						<Button onClick={() => {
 							if (pagination.offset !== 0) {
 								let _offset = pagination.offset -= 10
@@ -88,9 +88,9 @@ function App() {
 					}
 					<div>
 						<div align="center" className='container'>
-							<div className="container">
+							<div>
 								{gifs.map((gif,i) =>
-									<div key={i} className="video" style={{ margin: 2 }} >
+									<div key={i} className="item" style={{ margin: 2 }} >
 										<video autoPlay loop src={gif.images.fixed_height.mp4} />
 									</div>
 								)}
