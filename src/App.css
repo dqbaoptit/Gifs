@@ -4,5 +4,15 @@
 }
 
 body {
-    background-color: black;
+    background-color: pink;
+}
+
+.body {
+    display: flex;
+    justify-items: normal;
+    align-items: center;
+}
+
+.body button {
+    margin: 30px
 }
