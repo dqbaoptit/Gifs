@@ -70,7 +70,7 @@ export default () => {
                     {(url !== baseUrl && sticker.length !== 0) &&
                         <Button onClick={() => {
                             if (pagination.offset !== 0) {
-                                let _offset = pagination.offset -= 10
+                                let _offset = pagination.offset -= 18
                                 setPagination({
                                     ...pagination,
                                     offset: _offset
@@ -99,7 +99,7 @@ export default () => {
                     </div>
                     {(url !== baseUrl && sticker.length !== 0) &&
                         <Button onClick={() => {
-                            let _offset = pagination.offset += 10
+                            let _offset = pagination.offset += 18
                             setPagination({
                                 ...pagination,
                                 offset: _offset
