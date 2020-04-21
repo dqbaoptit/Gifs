@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "80025b737a125f643f172c43989ff07e",
+    "revision": "3a7ac8e5553a2a468f9dd114601e4370",
     "url": "/Gifs/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Gifs/static/css/2.a43b59a1.chunk.css"
   },
   {
-    "revision": "6ec51351b04fc7247cea",
+    "revision": "d375f02b803335508d4e",
     "url": "/Gifs/static/css/main.629ebfb1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Gifs/static/js/2.482b01cf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ec51351b04fc7247cea",
-    "url": "/Gifs/static/js/main.0d763f5a.chunk.js"
+    "revision": "d375f02b803335508d4e",
+    "url": "/Gifs/static/js/main.c29057dc.chunk.js"
   },
   {
     "revision": "0e2ad907bb2a42968473",
