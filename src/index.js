@@ -11,8 +11,8 @@ import 'antd/dist/antd.css';
 ReactDOM.render(
   <Router >
     <Switch>
-      <Route exact path='/Gifs' component={GIF} />
-      <Route path='/sticker/' component={Sticker} />
+      <Route exact path='/Gifs/' component={GIF} />
+      <Route path='/Gifs/Sticker/' component={Sticker} />
     </Switch>
   </Router>,
   document.getElementById('root')

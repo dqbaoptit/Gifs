@@ -5,10 +5,10 @@ export default () => {
     return (
         <Menu mode="horizontal" style={{ margin: 20 }}>
             <Menu.Item>
-                <Link to="/Gifs" >Gifs</Link>
+                <Link to="/Gifs/" >Gifs</Link>
             </Menu.Item>
             <Menu.Item>
-                <Link to="/sticker">Sticker</Link>
+                <Link to="/Gifs/Sticker/">Sticker</Link>
             </Menu.Item>
         </Menu>
     );
