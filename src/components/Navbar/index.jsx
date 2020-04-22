@@ -8,7 +8,7 @@ export default () => {
                 <Link to="/Gifs/" >Gifs</Link>
             </Menu.Item>
             <Menu.Item>
-                <Link to="/Gifs/Sticker/">Sticker</Link>
+                <Link to="/Sticker/">Sticker</Link>
             </Menu.Item>
         </Menu>
     );

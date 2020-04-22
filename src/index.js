@@ -12,7 +12,7 @@ ReactDOM.render(
   <Router >
     <Switch>
       <Route exact path='/Gifs/' component={GIF} />
-      <Route path='/Gifs/Sticker/' component={Sticker} />
+      <Route path='/Sticker/' component={Sticker} />
     </Switch>
   </Router>,
   document.getElementById('root')
